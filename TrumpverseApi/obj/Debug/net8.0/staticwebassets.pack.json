@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Emma\\OneDrive\\Dokumenter\\kristiania\\H24\\Webutvikling\\Webutvikling Eksamen\\TrumpverseApi\\wwwroot\\images\\trump.jpg",
+      "PackagePath": "staticwebassets\\images\\trump.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TrumpverseApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.TrumpverseApi.props",
+      "PackagePath": "build\\TrumpverseApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.TrumpverseApi.props",
+      "PackagePath": "buildMultiTargeting\\TrumpverseApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.TrumpverseApi.props",
+      "PackagePath": "buildTransitive\\TrumpverseApi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

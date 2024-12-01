@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "azf7tE07A0gWjt8YHYVQrHfXNwJrHdJK0Y5bEiBWULA=",
+  "Source": "TrumpverseApi",
+  "BasePath": "_content/TrumpverseApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "TrumpverseApi\\wwwroot",
+      "Source": "TrumpverseApi",
+      "ContentRoot": "C:\\Users\\Emma\\OneDrive\\Dokumenter\\kristiania\\H24\\Webutvikling\\Webutvikling Eksamen\\TrumpverseApi\\wwwroot\\",
+      "BasePath": "_content/TrumpverseApi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Emma\\OneDrive\\Dokumenter\\kristiania\\H24\\Webutvikling\\Webutvikling Eksamen\\TrumpverseApi\\wwwroot\\images\\trump.jpg",
+      "SourceId": "TrumpverseApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Emma\\OneDrive\\Dokumenter\\kristiania\\H24\\Webutvikling\\Webutvikling Eksamen\\TrumpverseApi\\wwwroot\\",
+      "BasePath": "_content/TrumpverseApi",
+      "RelativePath": "images/trump.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\trump.jpg"
+    }
+  ]
+}
