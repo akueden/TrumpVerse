@@ -32,7 +32,7 @@ const RegisterThought = () => {
                 if(e.target.files && e.target.files[0]){ // Bilde kan være null
                     const file = e.target.files[0];
                     setImage(file);
-                }    
+                } 
             break;
             case "category":
                 setCategory(e.target.value);
