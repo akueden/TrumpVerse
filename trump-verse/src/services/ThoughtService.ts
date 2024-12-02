@@ -3,9 +3,10 @@ import IThought from "../interfaces/IThought";
 
 const ThoughtService = (()=>{
 
-    const thoughtControllerEndpoint = "http://localhost:5080/api/thought";
+    const thoughtControllerEndpoint = "http://localhost:5080/api/thought/";
     const imageUploadControllerEndpoint = "http://localhost:5080/api/imageUpload";
     const gameImageEndpoint = "http://localhost:5080/images/";
+    const categoryControllerEndpoint = "http://localhost:5080/api/thought/getByCategory/";
 
     const getAll = async () : Promise<{ success: boolean; data: IThought[] | string}> => {    
         try{
@@ -35,7 +36,7 @@ const ThoughtService = (()=>{
     const getByCategory = async (category: string) : Promise<IThought | null> => {
         if( category != null && category != undefined && category.length > 0 ){
             try{
-                const result = await axios.get(thoughtControllerEndpoint + category);
+                const result = await axios.get(categoryControllerEndpoint + category);
                 return result.data as IThought;
             } catch(e){
                 console.log("Feil fra getByCategory i ThoughtService:", e);

@@ -10,7 +10,7 @@ const RegisterThought = () => {
     const {postThought} = useContext(ThoughtContext) as IThoughtContext;
 
     const [thought, setThought] = useState<IThought[]>([]);
-
+    
     const [heading, setHeading] = useState<string>("");
     const [content, setContent] = useState<string>("");
     const [image, setImage] = useState<File | null>(null);
@@ -61,11 +61,11 @@ const RegisterThought = () => {
             if( thoughtsFromService.success === true && Array.isArray(thoughtsFromService.data)){            
                 setThought(thoughtsFromService.data as IThought[]);
             }else if( thoughtsFromService.success === false ){
-                console.error("API returnerte ugyldige data:", thoughtsFromService.data);
+                console.log("API returnerte ugyldige data:", thoughtsFromService.data);
                 setThought([]);
             }        
         } catch(e){
-           console.error("Feil i getAndSetThoughtsFromService:", e);
+            console.log("Feil i getAndSetThoughtsFromService:", e);
             setThought([]);
         }
     }

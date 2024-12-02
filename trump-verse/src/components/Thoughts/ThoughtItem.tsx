@@ -7,7 +7,7 @@ const ThoughtItem : FC<IThought> = ({heading, content, image, category}) => {
         <article>   
             <h3>{heading}</h3>
             <p>{content}</p>
-            <img src={ThoughtService.getImageEndpoint() + image}/>
+            {image && <img src={ThoughtService.getImageEndpoint() + image}/>}
             <p>{category}</p>
         </article>
     )

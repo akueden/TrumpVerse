@@ -45,6 +45,21 @@ export const ThoughtProvider : FC<IProps> = ({children}) => {
         }
     }
 
+    const getThoughtByCategory = async (category: string) : Promise<IThought | null> => {
+        try{
+            if(category != null && category != undefined && category.length > 0){
+                const thoughtFromService = await ThoughtService.getByCategory(category);
+                console.log(thoughtFromService);
+                return thoughtFromService;
+            } else{
+                return null;
+            }
+        } catch(e){
+            console.log("Feil fra getThoughtByCategory i ThoughtContext", e);
+            return null;
+        }
+    }
+
     const postThought = async (newThought: IThought, newImage: File | null) : Promise<IThought | null> => {
         try{
             const result = await ThoughtService.postThought(newThought, newImage);
@@ -83,7 +98,7 @@ export const ThoughtProvider : FC<IProps> = ({children}) => {
     }
     
     return(
-        <ThoughtContext.Provider value={{thoughts, getThoughtById, postThought, putThought, deleteThought}}>
+        <ThoughtContext.Provider value={{thoughts, getThoughtById, getThoughtByCategory, postThought, putThought, deleteThought}}>
             {children}
         </ThoughtContext.Provider>
     )

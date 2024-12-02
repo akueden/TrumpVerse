@@ -44,6 +44,25 @@ public class ThoughtController : ControllerBase
         }
     }
 
+    [HttpGet]
+    [Route("[action]/{category}")]
+    public async Task<ActionResult<Thought>> GetByCategory(string category)
+    {
+        try
+        {
+            List<Thought> thoughts = await _thoughtContext
+                .Thoughts.Where(
+                    thought => thought.Category != null && thought.Category.ToLower().Contains(category.ToLower())
+                )
+                .ToListAsync();
+            return Ok(thoughts);
+        }
+        catch
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError);
+        }
+    }
+
     [HttpPost]
     public async Task<ActionResult<Thought>> Post(Thought newThought)
     {
@@ -51,7 +70,7 @@ public class ThoughtController : ControllerBase
         {
             _thoughtContext.Thoughts.Add(newThought);
             await _thoughtContext.SaveChangesAsync();
-            return newThought;
+            return Created();
         }
         catch
         {
