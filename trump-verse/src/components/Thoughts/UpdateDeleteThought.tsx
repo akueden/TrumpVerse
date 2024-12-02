@@ -39,7 +39,7 @@ const UpdateDeleteThought = () => {
     }
 
     const getByIdFromContext = async () => {
-        if( id != null && id != undefined && id.toString().length >0 && !isNaN(Number(id))){
+        if(id != null && id != undefined && id.toString().length >0 && !isNaN(Number(id))){
             try{
                 const thought = await getThoughtById(parseInt(id));
                 console.log(thought);
